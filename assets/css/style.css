@@ -1,0 +1,12 @@
+fluent-card {
+    vertical-align: middle;
+    padding: 1em;
+    margin: 0 auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    max-width: 50%;
+}
+
+h1, h2, h3, h4, h5, h6, b {
+    font-family: 'Noto Serif SC';
+}
