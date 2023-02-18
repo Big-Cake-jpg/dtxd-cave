@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="https://npm.onmicrosoft.cn/bulma@0.9.4/css/bulma.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap">
         <script src="https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.js"></script>
-        <link rel="stylesheet" src="https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.css">
+        <link rel="stylesheet" href="https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.css">
         <script src="https://npm.onmicrosoft.cn/meting@2/dist/Meting.min.js"></script>
         <script>
             var meting_api='https://meting-api.lihaoyu.cn/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
@@ -25,7 +25,6 @@
         <fluent-card>
             <div class="content">
                 <h1>大唐现代回声洞</h1>
-                <fluent-divider></fluent-divider>
                 <meting-js
 	                server="netease"
 	                type="song"
@@ -33,7 +32,7 @@
                 </meting-js>
                 <p>欢迎来到大唐现代回声洞，大家可以在这里<b>匿名地</b>畅所欲言。</p>
                 <p>如果愿意进行留言，请务必遵守<a href="/tos.html">「使用守则」</a>。</p>
-                <fluent-button appearance="accent"><a href="https://dtxd-comment.lihaoyu.cn" target="_blank">注册账号</a></fluent-button>
+                <a href="https://dtxd-comment.lihaoyu.cn/ui" target="_blank"><fluent-button appearance="accent">注册账号</fluent-button></a>
                 <h2>统计信息</h2>
                 <p>页面浏览量: <span class="waline-pageview-count" data-path="</>"/></p>
                 <p>留言数量：<span class="waline-comment-count" data-path="/index.html"/></p>
@@ -49,8 +48,8 @@
             init({
                 el: '#waline',
                 serverURL: 'https://dtxd-comment.lihaoyu.cn',
-                // pageview: true,
-                // comment: true,
+                pageview: true,
+                comment: true,
             });
             </script>
         </fluent-card>
