@@ -1,60 +1,183 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>大唐现代回声洞</title>
-        <meta name="description" content="大唐现代回声洞，想说什么都可以！">
-        <meta name="theme-color" content="#ffffff">
-        <link rel="icon" href="https://img-blog.csdnimg.cn/e3918738b269411aa3542003e7aab10c.jpg">
-        <link rel="apple-touch-icon" href="https://img-blog.csdnimg.cn/e3918738b269411aa3542003e7aab10c.jpg">
-        <script type="module" src="https://npm.onmicrosoft.cn/@fluentui/web-components"></script>
-        <link rel="stylesheet" href="https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.css">
-        <link rel="stylesheet" media="screen and (min-width: 600px)" href="/assets/css/style.css">
-        <link rel="stylesheet" media="screen and (max-width: 600px)" href="/assets/css/style-mobile.css">
-        <link rel="stylesheet" href="https://npm.onmicrosoft.cn/bulma@0.9.4/css/bulma.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap">
-        <script src="https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.js"></script>
-        <link rel="stylesheet" href="https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.css">
-        <script src="https://npm.onmicrosoft.cn/meting@2/dist/Meting.min.js"></script>
-        <script>
-            var meting_api='https://meting-api.lihaoyu.cn/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
-        </script>
-        <script defer src="/_vercel/insights/script.js"></script>
-    </head>
-    <body>
-        <fluent-card>
-            <div class="content">
-                <h1>大唐现代回声洞</h1>
-                <meting-js
-	                server="netease"
-	                type="song"
-	                id="2005302493">
-                </meting-js>
-                <p>欢迎来到大唐现代回声洞，大家可以在这里<b>匿名地</b>畅所欲言。</p>
-                <p>如果愿意进行留言，请务必遵守<a href="/tos.html">「使用守则」</a>。</p>
-                <a href="https://dtxd-comment.lihaoyu.cn/ui" target="_blank"><fluent-button appearance="accent">注册账号</fluent-button></a>
-                <h2>统计信息</h2>
-                <p>
-                    页面浏览量: <b><span class="waline-pageview-count" /></b></br>
-                    留言数量：<b><span class="waline-comment-count" /></b>
-                </p>
-                <h2>关于</h2>
-                <p><b>Proudly powered by Waline, Fluent UI, Vercel. Built with ❤️ heart, ✨ stars & 🐛 bugs.</b></p>
-            </div>
-        </fluent-card>
-        <fluent-card>
-            <div id="waline"></div>
-            <script type="module">
-            import { init } from 'https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.mjs';
-      
-            init({
-                el: '#waline',
-                serverURL: 'https://dtxd-comment.lihaoyu.cn',
-                pageview: true,
-                comment: true,
-            });
-            </script>
-        </fluent-card>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>大唐现代回声洞</title>
+    <meta name="description" content="大唐现代回声洞，想说什么都可以！" />
+    <meta name="theme-color" content="#811d1f" />
+    <link
+      rel="icon"
+      href="https://upload-bbs.miyoushe.com/upload/2023/04/14/330908707/01ed3ec81c815ff3d477b8ec8500f0bb_5725842111015214783.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://upload-bbs.miyoushe.com/upload/2023/04/14/330908707/01ed3ec81c815ff3d477b8ec8500f0bb_5725842111015214783.png"
+    />
+    <script
+      type="module"
+      src="https://npm.onmicrosoft.cn/@fluentui/web-components"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline-meta.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://jsd.onmicrosoft.cn/gh/ledhcg/fluent-icons-for-web/fonts/fluent-icons-for-web.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 600px)"
+      href="/assets/css/style.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width: 600px)"
+      href="/assets/css/style-mobile.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://npm.onmicrosoft.cn/bulma@0.9.4/css/bulma.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap"
+    />
+    <script src="https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://npm.onmicrosoft.cn/aplayer@1.10.1/dist/APlayer.min.css"
+    />
+    <script src="https://npm.onmicrosoft.cn/meting@2/dist/Meting.min.js"></script>
+    <script>
+      var meting_api =
+        "https://meting-api.lihaoyu.cn/api?server=:server&type=:type&id=:id&auth=:auth&r=:r";
+    </script>
+    <script>
+      const registerServiceWorker = async () => {
+        if ("serviceWorker" in navigator) {
+          try {
+            const registration = await navigator.serviceWorker.register(
+              "/sw.js",
+              {
+                scope: "/",
+              }
+            );
+            if (registration.installing) {
+              console.log("正在安装 Service Worker");
+            } else if (registration.waiting) {
+              console.log("已安装 Service Worker");
+            } else if (registration.active) {
+              console.log("已激活 Service Worker");
+            }
+          } catch (error) {
+            console.error(`Service Worker 注册失败：${error}`);
+          }
+        }
+      };
+      registerServiceWorker();
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <fluent-card>
+      <div class="content">
+        <h1>大唐现代回声洞</h1>
+        <meting-js server="netease" type="song" id="2019862497"> </meting-js>
+        <p>欢迎来到大唐现代回声洞，大家可以在这里<b>匿名地</b>畅所欲言。</p>
+        <p>
+          如果愿意进行留言，请务必遵守<a href="/tos.html">「使用守则」</a>。
+        </p>
+        <a href="https://dtxd-comment.lihaoyu.cn/ui" target="_blank"
+          ><fluent-button appearance="accent">注册账号</fluent-button></a
+        >
+        <h2>公告</h2>
+        <div class="notification is-info">
+          <p>
+            欢迎拜访回声洞！留言时，<b>除了留言框外其它内容均可以留空不填</b>。<br />
+            输入自己的留言之后，按下“提交”按钮，然后等待一段时间即可看到你的留言。<br />
+            如你愿意成为一名管理员帮助管理评论的话，请通过「使用守则」内的联系方式与我联系并提前注册一个账号。<br />
+            如果觉得不错的话，请把它分享给你的同学或者老师吧！
+          </p>
+        </div>
+        <div class="notification is-danger">
+          距离初三年级中考<b
+            >仅剩
+            <script src="/assets/js/zk-countdown.js"></script>
+            天</b
+          >，中考加油、初三加油！
+        </div>
+        <h2>统计信息</h2>
+        <p>
+          <i class="fiw fiw-content-view-32-filled"></i> 页面浏览量:
+          <b><span class="waline-pageview-count" /></b><br />
+          <i class="fiw fiw-chat-48-filled"></i> 留言数量：<b
+            ><span class="waline-comment-count"
+          /></b>
+        </p>
+        <h2>关于</h2>
+        <p>
+          <b
+            >Proudly powered by Waline, Fluent UI, Vercel. Built with ❤️ heart,
+            ✨ stars & 🐛 bugs.</b
+          >
+        </p>
+        <h2>友情链接</h2>
+        <p>
+          <b
+            ><a href="https://lihaoyu.cn">大蛋糕的烘焙坊</a>
+            <a href="https://bjwz.yuzu-soft.cf">北京五中树洞</a></b
+          >
+        </p>
+      </div>
+    </fluent-card>
+    <fluent-card>
+      <div id="waline"></div>
+      <script type="module">
+        import { init } from "https://npm.onmicrosoft.cn/@waline/client@v2/dist/waline.mjs";
+
+        init({
+          el: "#waline",
+          serverURL: "https://dtxd-comment.lihaoyu.cn",
+          pageview: true,
+          comment: true,
+          search: false,
+          emoji: [
+            "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/bilibili/",
+            "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/weibo/",
+            "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/qq/",
+            "https://jsd.onmicrosoft.cn/npm/@waline/emojis@latest/tieba/",
+            "https://jsd.onmicrosoft.cn/gh/walinejs/emojis@latest/bmoji/",
+          ],
+          dark: "auto",
+          locale: {
+            optional: "可选项目",
+            placeholder:
+              "在这里填写你想要发送的内容。请勿提交或上传任何违反「使用守则」的内容",
+          },
+          imageUploader: (file) => {
+            let formData = new FormData();
+            let headers = new Headers();
+            formData.append("file", file);
+            headers.append("Accept", "multipart/form-data");
+            return fetch(
+              "https://bbs.ldmnq.com/api/bbs/upload?dir=topic/attachment",
+              {
+                method: "POST",
+                /* headers: headers, */
+                body: formData,
+              }
+            )
+              .then((resp) => resp.json())
+              .then((resp) => resp.data.data);
+          },
+        });
+      </script>
+    </fluent-card>
+  </body>
 </html>

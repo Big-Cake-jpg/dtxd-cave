@@ -1,12 +1,110 @@
 fluent-card {
-    vertical-align: middle;
-    padding: 1em;
-    margin: 0 auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    max-width: 50%;
+  vertical-align: middle;
+  padding: 1em;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  max-width: 700px;
 }
 
-h1, h2, h3, h4, h5, h6, b {
-    font-family: 'Noto Serif SC';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+  font-family: "Noto Serif SC";
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    background-color: #282c34;
+    color: #ffffff;
+  }
+
+  .content {
+    color: #ffffff;
+  }
+
+  .content h1,
+  .content h2,
+  .content h3,
+  .content h4,
+  .content h5,
+  .content h6 {
+    color: #ffffff;
+  }
+
+  fluent-card {
+    background-color: #212121;
+  }
+}
+
+:root {
+  /* 字体大小 */
+  --waline-font-size: 16px;
+
+  /* 常规颜色 */
+  --waline-white: #fff;
+  --waline-light-grey: #999;
+  --waline-dark-grey: #666;
+
+  /* 主题色 */
+  --waline-theme-color: #811d1f;
+  --waline-active-color: #b92c2e;
+
+  /* 布局颜色 */
+  --waline-color: #444;
+  --waline-bgcolor: #fff;
+  --waline-bgcolor-light: #f8f8f8;
+  --waline-bgcolor-hover: #f0f0f0;
+  --waline-border-color: #ddd;
+  --waline-disable-bgcolor: #f8f8f8;
+  --waline-disable-color: #bbb;
+  --waline-code-bgcolor: #282c34;
+
+  /* 特殊颜色 */
+  --waline-bq-color: #f0f0f0;
+
+  /* 头像 */
+  --waline-avatar-size: 3.25rem;
+  --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+
+  /* 徽章 */
+  --waline-badge-color: #3498db;
+  --waline-badge-font-size: 0.775em;
+
+  /* 信息 */
+  --waline-info-bgcolor: #f8f8f8;
+  --waline-info-color: #999;
+  --waline-info-font-size: 0.625em;
+
+  /* 渲染选择 */
+  --waline-border: 1px solid var(--waline-border-color);
+  --waline-avatar-radius: 50%;
+  --waline-box-shadow: none;
+}
+
+/* 根据用户设置 ↓ */
+darkmode-selector {
+  /* 常规颜色 */
+  --waline-white: #000;
+  --waline-light-grey: #666;
+  --waline-dark-grey: #999;
+
+  /* 布局颜色 */
+  --waline-color: #888;
+  --waline-bgcolor: #1e1e1e;
+  --waline-bgcolor-light: #272727;
+  --waline-border-color: #333;
+  --waline-disable-bgcolor: #444;
+  --waline-disable-color: #272727;
+
+  /* 特殊颜色 */
+  --waline-bq-color: #272727;
+
+  /* 其他颜色 */
+  --waline-info-bgcolor: #272727;
+  --waline-info-color: #666;
 }

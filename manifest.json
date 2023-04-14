@@ -1,0 +1,29 @@
+{
+    "name": "大唐现代回声洞",
+    "lang": "zh-CN",
+    "short_name": "大唐现代回声洞",
+    "description": "大唐现代回声洞，想说什么都可以！",
+    "start_url": "/",
+    "scope": "/",
+    "display": "standalone",
+    "theme_color": "#811d1f",
+    "background_color": "#ffffff",
+    "icons": [
+        {
+            "src": "https://upload-bbs.miyoushe.com/upload/2023/04/14/330908707/01ed3ec81c815ff3d477b8ec8500f0bb_5725842111015214783.png",
+            "sizes": "512x512"
+        },
+        {
+            "src": "https://upload-bbs.miyoushe.com/upload/2023/04/14/330908707/01ed3ec81c815ff3d477b8ec8500f0bb_5725842111015214783.png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "https://upload-bbs.miyoushe.com/upload/2023/04/14/330908707/01ed3ec81c815ff3d477b8ec8500f0bb_5725842111015214783.png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "https://upload-bbs.miyoushe.com/upload/2023/04/14/330908707/01ed3ec81c815ff3d477b8ec8500f0bb_5725842111015214783.png",
+            "sizes": "128x128"
+        }
+    ]
+}
