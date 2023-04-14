@@ -37,30 +37,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap"
     />
-    <script>
-      const registerServiceWorker = async () => {
-        if ("serviceWorker" in navigator) {
-          try {
-            const registration = await navigator.serviceWorker.register(
-              "/sw.js",
-              {
-                scope: "/",
-              }
-            );
-            if (registration.installing) {
-              console.log("正在安装 Service Worker");
-            } else if (registration.waiting) {
-              console.log("已安装 Service Worker");
-            } else if (registration.active) {
-              console.log("已激活 Service Worker");
-            }
-          } catch (error) {
-            console.error(`Service Worker 注册失败：${error}`);
-          }
-        }
-      };
-      registerServiceWorker();
-    </script>
     <script defer src="/_vercel/insights/script.js"></script>
   </head>
   <body>
